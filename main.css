@@ -35,8 +35,10 @@
 body{  
     margin: 0;
     padding: 0;
-    background: rgba(255, 255, 255, 0.87);
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
 }
+
 .full-screen-img {
     width: 100vw;          /* تأخذ عرض الشاشة بالكامل */
     height: 100%;         /* تأخذ طول الشاشة بالكامل */
@@ -55,11 +57,13 @@ p{
 
 }
 .contect {
-    display: flex;
-    justify-content: center; /* لتوسيط الزر أفقياً */
-    align-items: center;     /* لتوسيط الزر عمودياً */
-    height: 100vh;        /* لجعل الحاوية تأخذ طول الشاشة بالكامل */
-}
+  
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    padding: 30px;
+}       /* لجعل الحاوية تأخذ طول الشاشة بالكامل */
+
 
 footer p{
     background-color: rgba(0, 0, 0, 0);
@@ -100,29 +104,27 @@ footer p{
             gap: 15px;
             padding: 20px;
         }
-        
         .card{
     background-color: white;
-    border-radius: 10px;
+    border-radius: 12px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
-    text-align: center;
-    border: 2px solid red;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+
+    transition: 0.3s;
 }
+
 .card img{
     width: 100%;
-    height: 350px;
+    height: 220px;
     object-fit: cover;
 }
 .fooy{
     grid-column: span 2;
-    background-color: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 
-    display: flex;
-    flex-direction: column;
+    background-color: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 .fooy img{
     width: 100%;
@@ -131,7 +133,16 @@ footer p{
     overflow: hidden;
 }
 .card-content{
-    padding: 20px;
+    padding: 15px;
+}
+
+.card-title{
+    font-size: 20px;
+}
+
+.card-description{
+    line-height: 1.6;
+    color: #555;
 }
 .fooy:hover{
     transform: translateY(-5px);
@@ -143,5 +154,38 @@ footer p{
     height: 550px;
     object-fit: cover;
 }
+.card-button{
+    background-color: black;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
 
+    transition: 0.3s;
+}
+.card:nth-child(1){
+    animation-delay: 0.2s;
+}
+
+.card:nth-child(2){
+    animation-delay: 0.4s;
+}
+
+.card:nth-child(3){
+    animation-delay: 0.6s;
+}
+@media(max-width:786px){
+
+    .contener{
+        grid-template-columns: 1fr;
+    }
+
+    .fooy{
+        grid-column: span 1;
+    }
+
+}
+
+        
         
