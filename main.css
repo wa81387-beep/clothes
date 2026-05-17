@@ -1,0 +1,147 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding:15px 10px;
+    gap: 10px;
+    }
+.logo{
+    font-size: 24px;
+    font-weight: bold;
+    color: #000;
+}
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap:10px
+}
+.nav-links a{
+    text-decoration: none;
+    color: #000;
+    font-size: 17px;
+    transition:color 0.3s ease ;
+}
+.nav-links a:hover{
+    color:red;
+
+}
+body{  
+    margin: 0;
+    padding: 0;
+    background: rgba(255, 255, 255, 0.87);
+}
+.full-screen-img {
+    width: 100vw;          /* تأخذ عرض الشاشة بالكامل */
+    height: 100%;         /* تأخذ طول الشاشة بالكامل */
+    object-fit: cover;     /* تحافظ على أبعاد الصورة دون تشويهها */
+    background: rgb(255, 255, 255);
+    object-position: center;
+    gap: 10px; /* تضمن بقاء منتصف الصورة في المركز */
+   
+}
+p{
+    color: azure;
+    font-size: 50px;
+    position: absolute;
+    text-align: center;
+  gap: 20px;
+
+}
+.contect {
+    display: flex;
+    justify-content: center; /* لتوسيط الزر أفقياً */
+    align-items: center;     /* لتوسيط الزر عمودياً */
+    height: 100vh;        /* لجعل الحاوية تأخذ طول الشاشة بالكامل */
+}
+
+footer p{
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 10px;
+}
+
+         .my-button {
+            position: absolute;    /* يتيح تحريك الزرار بحرية فوق الصورة */
+            top: 80%;              /* ينزل الزرار بنسبة 50% من الأعلى */
+            left: 50%;             /* يتحرك بنسبة 50% من اليسار */
+            transform: translate(-50%, -50%); /* يضمن توسيط الزرار من مركزه تماماً */
+            
+            /* تنسيق شكل الزرار (من الخطوة السابقة) */
+            background-color: #ffffff; /* لون أحمر جذاب */
+            color: rgb(0, 0, 0);
+            padding: 14px 28px;
+            font-size: 18px;
+            border: none;
+            border-radius: 30px;   /* زرار بيضاوي الشكل */
+            cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+        }
+
+        /* تأثير مرور الماوس */
+        .my-button:hover {
+            background-color: #020202;
+            color: #ffffff;
+            transform: translate(-50%, -55%); /* يرتفع للأعلى قليلاً مع الحفاظ على التوسيط */
+            box-shadow: 0 6px 20px rgba(0,0,0,0.4);
+        }
+        .contener{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+            gap: 15px;
+            padding: 20px;
+        }
+        
+        .card{
+    background-color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    text-align: center;
+    border: 2px solid red;
+}
+.card img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.fooy{
+    grid-column: span 2;
+    background-color: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+
+    display: flex;
+    flex-direction: column;
+}
+.fooy img{
+    width: 100%;
+    height: 850px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.card-content{
+    padding: 20px;
+}
+.fooy:hover{
+    transform: translateY(-5px);
+    transition: 0.3s;
+}
+.card img
+{
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+        

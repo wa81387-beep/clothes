@@ -1,0 +1,118 @@
+body{
+  background-image:url(back.jpeg);
+}
+.navbar { 
+    background-color: rgb(0, 0, 0); 
+    color: #fffdfd; 
+    padding: 15px; /* زيادة الـ padding ليعطي شكلاً أفضل للبار */
+    border-radius: 5px; 
+    margin-bottom: 30px; 
+    /* لتوزيع اللوجو والقائمة على أطراف الناف بار */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links { 
+    display: flex; 
+    align-items: center; 
+    list-style: none; 
+    gap: 30px; /* 👈 هذه الخاصية تصنع مسافة 30 بكسل بين كل لينك والآخر */
+} 
+
+.nav-links a { 
+    color: #fffdfd; 
+    font-weight: bolder; 
+    text-decoration: none; 
+    /* 👈 تم حذف justify-content والـ display الزائدين من هنا */
+    padding: 5px 10px; /* لتسهيل الضغط على اللينك */
+}
+
+h1{
+  text-align: center;
+  font-size: 30px;
+  font-weight: 200;
+}
+p{
+  font-size: 20px;
+  text-align: center;
+  font-weight: 400;
+  font-family: Georgia, 'Times New Roman', Times, serif ;
+}
+  .button {
+    text-decoration: none;
+    padding: 10px 20px;
+    background-color: #000000;
+    color: rgb(255, 239, 239);
+    border-radius: 5px;
+}
+.button {
+  display: flex;
+  justify-content: center; /* للمنتصف أفقياً */
+     /* للمنتصف عمودياً (إذا كان هناك ارتفاع) */
+  height: 10px;  
+  padding: 10px; 
+  margin:100px ;        /* لجعل الحاوية بطول الشاشة بالكامل */
+}
+.container {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    
+}
+
+
+    .card {
+
+    width: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    background-color: white;
+
+}
+
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 15px;
+    gap: 20px;
+}
+ .carderkk { 
+    width: auto; 
+    border-radius: 10px; 
+    overflow: hidden; 
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
+    background-color: white; 
+    grid-column: span 3; 
+     /* 👈 إضافة flexbox هنا تجعل محتوى الكارت يترتب تلقائياً بدون مساحات زائدة */
+    display: grid;
+grid-template-columns: auto;
+} 
+
+.carderkk img { 
+    width: 100%; 
+    /* 👈 تم تغيير الارتفاع إلى بكسل ثابت (مثل 200px أو 250px) لحل المشكلة تماماً */
+    height: 220px; 
+    object-fit: cover; 
+} 
+
+.carderkk-content { 
+    /* 👈 تم تغيير الجريد هنا إلى flexbox لترتيب النصوص داخل الكارت بشكل مرن */
+    display: flex;
+  flex-direction: column;
+    padding: 15px; /* مسافة داخلية تعطي شكلاً أنيقاً للنصوص */
+}
+@media(max-width:786px){
+   .container{
+    grid-template-columns: 1fr;
+}
+.carderkk{
+      grid-column: span 1;
+   }
+}
